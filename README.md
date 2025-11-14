@@ -1,6 +1,6 @@
 # 西北农林科技大学硕博士论文引文格式（GB/T 7714—2015）
 
-[![License: CC BY-SA 3.0](https://img.shields.io/badge/License-CC%20BY--SA%203.0-blue.svg)](http://creativecommons.org/licenses/by-sa/3.0/)
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-blue.svg)](http://creativecommons.org/licenses/by-sa/4.0/)
 [![CSL Version](https://img.shields.io/badge/CSL-1.0-green.svg)](https://citationstyles.org/)
 [![中英文混排](https://img.shields.io/badge/%E4%B8%AD%E8%8B%B1%E6%96%87%E6%B7%B7%E6%8E%92-%E6%94%AF%E6%8C%81-brightgreen.svg)](https://github.com)
 
@@ -132,7 +132,7 @@
 
 ## 📄 许可证
 
-本项目采用 [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/) 许可证。
+本项目采用 [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/) 许可证。
 
 ---
 
