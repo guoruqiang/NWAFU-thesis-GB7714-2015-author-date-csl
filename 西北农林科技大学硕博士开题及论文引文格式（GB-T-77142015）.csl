@@ -458,17 +458,23 @@
   <!-- ========================================
        参考文献表格式定义（支持中英文混排）
        ======================================== -->
-  <!-- 参考文献表：按作者和年份排序
+  <!-- 参考文献表：先中文后英文，分别按作者和年份排序
        - entry-spacing="0": 条目间无额外间距
        - et-al-min="4": 4位及以上作者使用"等"或"et al."
        - et-al-use-first="3": 显示前3位作者
        - hanging-indent="true": 悬挂缩进
+
+       排序规则：
+       1. 先按语言排序（中文 zh 在前，英文 en 在后）
+       2. 同语言内按作者姓名排序
+       3. 同作者按年份排序
 
        注意：使用多个 <layout locale="xx"> 块来实现中英文混排
        虽然这不符合标准CSL 1.0规范，但Zotero的citeproc-js处理器支持此语法
        每条文献会根据其"语言"字段自动选择对应的layout -->
   <bibliography entry-spacing="0" et-al-min="4" et-al-use-first="3" hanging-indent="true">
     <sort>
+      <key variable="language" sort="ascending"/>
       <key macro="author"/>
       <key macro="issued-year"/>
     </sort>
