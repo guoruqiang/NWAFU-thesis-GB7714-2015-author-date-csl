@@ -1,0 +1,21 @@
+name: Sync to Gitee
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync to Gitee
+        uses: wearerequired/git-mirror-action@v1
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.GITEE_PRIVATE_KEY }}
+        with:
+          source-repo: git@github.com:guoruqiang/NWAFU-thesis-GB7714-2015-author-date-csl.git
+          destination-repo: git@gitee.com:guo-ruqiang/nwafu-thesis-gb7714-2015-author-date-csl.git
+
