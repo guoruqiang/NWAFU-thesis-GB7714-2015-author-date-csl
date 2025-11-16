@@ -11,13 +11,22 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Sync GitHub to Gitee
-        uses: Yikun/hub-mirror-action@master
+      - name: Checkout repository
+        uses: actions/checkout@v3
         with:
-          src: github/guoruqiang
-          dst: gitee/guo-ruqiang
-          dst_token: ${{ secrets.GITEE_TOKEN }}
-          static_list: "NWAFU-thesis-GB7714-2015-author-date-csl"
-          force_update: true
-          debug: true
+          fetch-depth: 0
+
+      - name: Sync to Gitee
+        env:
+          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+        run: |
+          # 配置 Git
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+
+          # 添加 Gitee 远程仓库（使用 HTTPS + Token）
+          git remote add gitee https://guo-ruqiang:${GITEE_TOKEN}@gitee.com/guo-ruqiang/nwafu-thesis-gb7714-2015-author-date-csl.git || true
+
+          # 强制推送到 Gitee
+          git push -f gitee main:main
 
