@@ -11,7 +11,7 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Sync to Gitee
+      - name: Sync GitHub to Gitee
         uses: Yikun/hub-mirror-action@master
         with:
           src: github/guoruqiang
