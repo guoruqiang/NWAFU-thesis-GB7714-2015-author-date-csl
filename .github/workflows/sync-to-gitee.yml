@@ -12,10 +12,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Sync to Gitee
-        uses: wearerequired/git-mirror-action@v1
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.GITEE_PRIVATE_KEY }}
+        uses: Yikun/hub-mirror-action@master
         with:
-          source-repo: git@github.com:guoruqiang/NWAFU-thesis-GB7714-2015-author-date-csl.git
-          destination-repo: git@gitee.com:guo-ruqiang/nwafu-thesis-gb7714-2015-author-date-csl.git
+          src: github/guoruqiang
+          dst: gitee/guo-ruqiang
+          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+          dst_token: ${{ secrets.GITEE_TOKEN }}
+          static_list: "NWAFU-thesis-GB7714-2015-author-date-csl"
+          force_update: true
+          debug: true
 
