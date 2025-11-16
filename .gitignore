@@ -19,6 +19,9 @@ desktop.ini
 *.bak
 *.log
 
+# 备份的 CSL 文件
+bak.csl
+
 # Windows
 ehthumbs.db
 Desktop.ini
