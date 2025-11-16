@@ -16,7 +16,6 @@ jobs:
         with:
           src: github/guoruqiang
           dst: gitee/guo-ruqiang
-          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
           dst_token: ${{ secrets.GITEE_TOKEN }}
           static_list: "NWAFU-thesis-GB7714-2015-author-date-csl"
           force_update: true
